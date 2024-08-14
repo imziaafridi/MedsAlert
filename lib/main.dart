@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meds_alert/core/const/app_colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,13 +30,25 @@ class MedsAlertView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.white,
       appBar: AppBar(
         title: Text(
           'MedsAlert',
           style: GoogleFonts.luckiestGuy(fontSize: 24),
         ),
+        backgroundColor: AppColors.white,
         centerTitle: true,
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: AppColors.lightColor,
+        child: const Icon(
+          Icons.photo_camera,
+          color: AppColors.grey,
+          size: 30,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
